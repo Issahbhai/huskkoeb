@@ -1,0 +1,18 @@
+# Installerede pakker skal ikke uploades til GitHub.
+node_modules/
+
+# Lokale Expo-filer og genererede builds.
+.expo/
+dist/
+web-build/
+/ios/
+/android/
+.metro-health-check*
+
+# Logfiler og lokale indstillinger.
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+.env
+.env*.local
