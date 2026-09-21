@@ -26,7 +26,7 @@ Expo åbner webappen i din browser. Web-understøttelsen bruger `react-dom`, `re
 Telefon:
 
 
-npx expo start
+Scan QR-koden som kommer frem når du har kørt npm run web
 
 
 Demovideo:
