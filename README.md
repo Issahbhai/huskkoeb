@@ -32,3 +32,4 @@ Scan QR-koden som kommer frem når du har kørt npm run web
 Demovideo:
 https://www.loom.com/share/01f2234c74f44d8d9e51c6af154ec793
 Jeg håber at det er okay, at jeg har brugt loom. Det er jeg bekendt med fra tidligere år
+hej
