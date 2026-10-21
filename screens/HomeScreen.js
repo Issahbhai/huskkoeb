@@ -1,5 +1,6 @@
-import { View, Text, Button } from 'react-native';
-import styles, { colors } from '../styles/GlobalStyle';
+import { View, Text, Pressable } from 'react-native';
+import styles from '../styles/GlobalStyle';
+import buttonStyles from '../styles/ButtonStyles';
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -13,19 +14,23 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       {/* Knapperne åbner de to andre sider i appen. */}
-      <View style={styles.buttonArea}>
-        <Button
-          title="Åbn indkøbsliste"
-          color={colors.primary}
-          onPress={() => navigation.navigate('Indkøbsliste')}
-        />
-      </View>
-      <View style={styles.buttonArea}>
-        <Button
-          title="Om appen"
-          color={colors.primary}
-          onPress={() => navigation.navigate('Om appen')}
-        />
+      <View style={buttonStyles.buttonRow}>
+        <View style={buttonStyles.rowButton}>
+          <Pressable
+            style={buttonStyles.button}
+            onPress={() => navigation.navigate('Indkøbsliste')}
+          >
+            <Text style={buttonStyles.buttonText}>Åbn indkøbsliste</Text>
+          </Pressable>
+        </View>
+        <View style={buttonStyles.rowButton}>
+          <Pressable
+            style={[buttonStyles.button, buttonStyles.secondaryButton]}
+            onPress={() => navigation.navigate('Om appen')}
+          >
+            <Text style={[buttonStyles.buttonText, buttonStyles.secondaryButtonText]}>Om appen</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   );

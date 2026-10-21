@@ -1,5 +1,6 @@
-import { View, Text, Button } from 'react-native';
-import styles, { colors } from '../styles/GlobalStyle';
+import { View, Text, Pressable } from 'react-native';
+import styles from '../styles/GlobalStyle';
+import buttonStyles from '../styles/ButtonStyles';
 
 export default function AboutScreen({ navigation }) {
   return (
@@ -12,17 +13,18 @@ export default function AboutScreen({ navigation }) {
         </Text>
         <Text style={styles.infoText}>1. Åbn indkøbslisten og skriv navnet på en vare.</Text>
         <Text style={styles.infoText}>2. Tryk på Tilføj vare for at sætte varen på listen.</Text>
-        <Text style={styles.infoText}>3. Tryk på Ryd listen, når du vil starte forfra.</Text>
+        <Text style={styles.infoText}>3. Tryk på Købt, når du har købt en vare.</Text>
         <Text style={styles.infoText}>
-          Listen gemmes ikke permanent. Når appen genstartes, vises eksempelvarerne igen.
+          Varerne gemmes lokalt, så listen stadig er der, når appen åbnes igen.
         </Text>
       </View>
-      <View style={styles.buttonArea}>
-        <Button
-          title="Tilbage til forsiden"
-          color={colors.primary}
+      <View style={buttonStyles.buttonArea}>
+        <Pressable
+          style={buttonStyles.button}
           onPress={() => navigation.navigate('Forside')}
-        />
+        >
+          <Text style={buttonStyles.buttonText}>Tilbage til forsiden</Text>
+        </Pressable>
       </View>
     </View>
   );

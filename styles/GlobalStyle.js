@@ -8,6 +8,7 @@ export const colors = {
   muted: '#667068',
   white: '#FFFFFF',
   border: '#D5DDD5',
+  accent: '#D88B5B',
 };
 
 // Alle tre sider bruger den samme styling fra denne fil.
@@ -49,15 +50,8 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
   },
-  listItem: {
-    backgroundColor: colors.white,
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: 10,
-  },
-  itemText: {
-    fontSize: 17,
-    color: colors.text,
+  purchasedList: {
+    flex: 1,
   },
   counterText: {
     fontSize: 16,
