@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^git status --short --branch && printf '\\\\n--- remotes ---\\\\n' && git remote -v && printf '\\\\n--- object database ---\\\\n' && git count-objects -vH && printf '\\\\n--- fsck ---\\\\n' && git fsck --full --no-reflogs$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
